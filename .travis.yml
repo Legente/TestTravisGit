@@ -2,12 +2,12 @@ language: java
 jdk:
 - openjdk11
 
-
 addons:
-sonarcloud : 
-organizations: "Legente"
-token: "a7edfd4d0d58a804b7baf03b1bd8a51b4e11b6c7"
+    sonarcloud:
+        organization: "Legente"
+        token: "daeb0652e6413d8a23e05f07147b4750f8bb9451"
+        
+script:
+- ant build
+- sonar-scanner
 
-script: 
--ant build
--sonar-scanner
